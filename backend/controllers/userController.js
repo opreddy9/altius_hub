@@ -13,9 +13,8 @@ exports.updateProfile = async (req, res) => {
     user.name = req.body.name;
     user.bio = req.body.bio;
 
-    // Update profile picture if provided
     if (req.file) {
-      if (user.profilePicture) fs.unlinkSync(user.profilePicture); // Delete old image if exists
+      if (user.profilePicture) fs.unlinkSync(user.profilePicture); 
       user.profilePicture = req.file.path;
     }
 
