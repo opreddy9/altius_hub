@@ -1,0 +1,4 @@
+{
+    "mongoURI":"mongodb+srv://op_reddy:om1729reddy@cluster0.la9ggbc.mongodb.net/altuisHub?retryWrites=true&w=majority",
+    "jwtSecret":"myjwtsecretithinkthisisusedtoencodesecretslikepasswordsbasedonthis"
+}
