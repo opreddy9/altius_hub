@@ -6,28 +6,27 @@ const TaskManagement = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState({ title: '', description: '', status: 'pending' });
 
-  // Fetch tasks from the backend
   useEffect(() => {
     axios.get('http://localhost:3000/api/tasks')
       .then((response) => setTasks(response.data))
       .catch((error) => console.error(error));
   }, []);
 
-  // Handle Task Creation
+  // Task Creation
   const createTask = () => {
     axios.post('http://localhost:3000/api/tasks', newTask)
       .then((response) => setTasks([...tasks, response.data]))
       .catch((error) => console.error(error));
   };
 
-  // Handle Task Deletion
+  // Task Deletion
   const deleteTask = (taskId) => {
     axios.delete(`http://localhost:3000/api/tasks/${taskId}`)
       .then(() => setTasks(tasks.filter(task => task._id !== taskId)))
       .catch((error) => console.error(error));
   };
 
-  // Handle Task Update
+  //Task Update
   const updateTask = (taskId, updatedData) => {
     axios.put(`http://localhost:3000/api/tasks/${taskId}`, updatedData)
       .then((response) => {
@@ -36,7 +35,7 @@ const TaskManagement = () => {
       .catch((error) => console.error(error));
   };
 
-  // Handle Drag and Drop Reordering
+  // Drag and Drop Reordering
   const onDragEnd = (result) => {
     const { destination, source } = result;
     if (!destination) return;

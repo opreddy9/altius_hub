@@ -6,12 +6,13 @@ import Register from './pages/register';
 import User from "./pages/user"
 import Login from "./pages/login"; 
 import UserProfile from './pages/userProfile';
+import HomePage from './pages/home';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/user" element={< User/>}/>
         <Route path="/login" element={< Login/>}/>

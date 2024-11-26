@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-// import './Form.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import  { redirect, Redirect } from 'react-router-dom'
-// import AlertColors from '../Alert/AlertColors'
+
 
 
 export default function Register (){
@@ -67,7 +66,6 @@ export default function Register (){
         <div className="container">
           <div className="row justify-content-center m-5">
             <div className="col-md-6 alireza p-4 ">
-            {/* {errorOccurred && <AlertColors color="red" text="A success alert for showing message." />} */}
             {curred }
               <form className="m-2" onSubmit={handleSubmit}>
                 <div className="form-group">

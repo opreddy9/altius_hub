@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import  { redirect, Redirect } from 'react-router-dom'
-// import AlertColors from '../Alert/AlertColors'
 
 
 export default function Login (){
